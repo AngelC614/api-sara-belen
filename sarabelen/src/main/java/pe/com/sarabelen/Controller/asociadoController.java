@@ -46,13 +46,13 @@ public class asociadoController {
     }
     @PutMapping("/{id}")
     public asociadoEntity update (@PathVariable Long id, @RequestBody asociadoEntity a){
-        a.setId_asociado(id);
+        a.setId_aso(id);
         return service.update(a);
     }
     @DeleteMapping("/{id}")
     public asociadoEntity delete (@PathVariable Long id){
         asociadoEntity objc = new asociadoEntity();
         objc.setEstado(false);
-        return service.delete(asociadoEntity.builder().id_asociado(id).build());
+        return service.delete(asociadoEntity.builder().id_aso(id).build());
     }
 }

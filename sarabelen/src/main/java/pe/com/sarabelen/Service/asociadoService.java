@@ -15,7 +15,7 @@ import pe.com.sarabelen.Entity.asociadoEntity;
 public interface asociadoService {
     List<asociadoEntity> FindAll();
     List<asociadoEntity> FindAllCustom();
-    Optional<asociadoEntity> finById (long Id);
+    Optional<asociadoEntity> finById (Long Id);
     asociadoEntity add (asociadoEntity a);
     asociadoEntity update (asociadoEntity a);
     asociadoEntity delete (asociadoEntity a);

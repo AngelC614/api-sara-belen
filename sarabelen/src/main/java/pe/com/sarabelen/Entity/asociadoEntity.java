@@ -21,21 +21,21 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity(name="asociadoEntity")
-@Table(name="asociado")
+@Table(name="asociados")
 public class asociadoEntity implements Serializable{
     private static final long serialVersionUID=1L;
     @Id
-    @Column(name="id")
+    @Column(name="id_asociado")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_asociado;
+    private Long id_aso;
     @Column(name="nombre_asociado")
-    private String  N_asoc;
+    private String  nom_aso;
     @Column(name="direc_asociado")
-    private String D_asoc;
-    @Column(name="est_asocaido")
-    private String E_asoc;
-    @Column(name="")
-    private String telf_asociado;
-    @Column(name="T_asoc")
+    private String dir_aso;
+    @Column(name="est_asociado")
+    private String est_aso;
+    @Column(name="telf_asociado")
+    private String tel_aso;
+    @Column(name="estado")
     private boolean estado;
 }

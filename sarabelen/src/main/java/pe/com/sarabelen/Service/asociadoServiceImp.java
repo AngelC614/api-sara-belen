@@ -36,7 +36,7 @@ public class asociadoServiceImp implements asociadoService {
     }
 
     @Override
-    public Optional<asociadoEntity> finById(long Id) {
+    public Optional<asociadoEntity> finById(Long Id) {
         return asocaidorepository.findById(Id);
     }
 
@@ -47,14 +47,14 @@ public class asociadoServiceImp implements asociadoService {
 
     @Override
     public asociadoEntity update(asociadoEntity a) {
-        asociadoEntity obja = asocaidorepository.getById(a.getId_asociado());
+        asociadoEntity obja = asocaidorepository.getById(a.getId_aso());
         BeanUtils.copyProperties(a, obja);
         return asocaidorepository.save(obja);
     }
 
     @Override
     public asociadoEntity delete(asociadoEntity a) {
-        asociadoEntity obja = asocaidorepository.getById(a.getId_asociado());
+        asociadoEntity obja = asocaidorepository.getById(a.getId_aso());
         obja.setEstado(false);
         return asocaidorepository.save(obja);
     }
