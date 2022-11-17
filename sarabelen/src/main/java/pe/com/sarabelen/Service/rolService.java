@@ -7,13 +7,13 @@ package pe.com.sarabelen.Service;
 import java.util.List;
 import java.util.Optional;
 import pe.com.sarabelen.Entity.rolEntity;
-import pe.com.sarabelen.Entity.usuariosEntity;
 
 /**
  *
  * @author arian
  */
 public interface rolService {
+    
      List<rolEntity> FindAll();
     List<rolEntity> FindAllCustom();
     Optional<rolEntity> findById(Long Id);

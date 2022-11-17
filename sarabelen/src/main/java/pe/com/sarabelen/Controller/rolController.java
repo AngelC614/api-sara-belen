@@ -25,6 +25,7 @@ import pe.com.sarabelen.Service.rolService;
 @RestController
 @RequestMapping("/roles")
 public class rolController {
+    
     @Autowired
     private rolService service;
     
@@ -54,5 +55,6 @@ public class rolController {
         rolEntity objr = new rolEntity();
         objr.setEstado(false);
         return service.delete(rolEntity.builder().id_rol(id).build());
+        
     }
 }

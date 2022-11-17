@@ -8,14 +8,15 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pe.com.sarabelen.Entity.rolEntity;
-import pe.com.sarabelen.Entity.usuariosEntity;
 import pe.com.sarabelen.Repository.rolRepository;
 
 /**
  *
  * @author arian
  */
+@Service
 public class rolServiceImp implements rolService {
     
     @Autowired
