@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 public class productosEntity implements Serializable{
     private static final long serialVersionUID=1L;
     @Id
-    @Column(name="id")
+    @Column(name="id_prod")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_producto;
     @Column(name="cantidad")

@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -46,8 +48,9 @@ public class usuariosEntity implements Serializable {
     private String pass_usu;
     @Column(name="telef_usuario")
     private String tel_usu;
-    @Column(name="rol_usuario")
-    private int rol_usu;
+    @ManyToOne
+    @JoinColumn(name="rol_usuario", referencedColumnName="id_rol", nullable = false)
+    private rolEntity rol_usu;
     @Column(name="estado")
     private boolean estado;
 }
